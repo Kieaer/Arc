@@ -57,6 +57,13 @@ allprojects{
         targetCompatibility = 1.8
         options.encoding = "UTF-8"
     }
+    
+    tasks.withType(Javadoc){
+        options{
+            addStringOption('Xdoclint:none', '-quiet')
+            encoding('UTF-8')
+        }
+    }
 }
 
 subprojects{
